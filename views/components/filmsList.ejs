@@ -1,0 +1,10 @@
+<div>
+    <% data.forEach(elt=> { %>
+        <a href=<%=`/${elt.id}` %>>
+            <img src="https://image.tmdb.org/t/p/w500<%=elt.poster_path %>" alt="">
+            <span>
+                <%= elt.original_title %>
+            </span>
+        </a>
+        <% }) %>
+</div>

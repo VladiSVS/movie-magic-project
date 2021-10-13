@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <%- include('../components/header.ejs') %>
+    </header>
+    <section id="movieBild">
+        <img src="https://image.tmdb.org/t/p/w500<%=dataMovie.backdrop_path %>" alt="">
+    </section>
+    <section id="movieID">
+        <h2>
+            <%=dataMovie.title %>
+        </h2>
+        <div>
+            <span>
+                <%=dataMovie.release_date %>
+            </span>
+            <span>
+                <%=dataMovie.status %>
+            </span>
+        </div>
+        <div>
+            <% dataMovie.genres.forEach(elt=> { %>
+                <span>
+                    <%= elt.name %>
+                </span>
+                <% }) %>
+        </div>
+        <h1>
+            <%=dataMovie.tagline %>
+        </h1>
+        <p>
+            <%=dataMovie.overview %>
+        </p>
+    </section>
+</body>
+
+</html>

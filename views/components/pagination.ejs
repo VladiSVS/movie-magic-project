@@ -1,0 +1,11 @@
+<div class="pagination">
+    <% for( let index=1; index< 1000; index++ ) { %>
+        <% if (index> 0 && index < 10) { %>
+                <a href=<%=`/movie/popular/${index}` %>>
+                    <button>
+                        <%= index %>
+                    </button>
+                </a>
+                <% } %>
+                    <% } %>
+</div>

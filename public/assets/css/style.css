@@ -1,0 +1,169 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #333333;
+}
+
+header {
+    height: 10vh;
+    padding: 0 10%;
+    background: #4F4F4F;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+header > div > a {
+color: #fff;
+text-decoration: none;
+font-size: 3em
+}
+
+header > div > form {
+    width: 50%;
+    text-align: right;
+}
+
+header > div > form > input:first-of-type {
+    height: 3em;
+    width: 30%;
+    border: none;
+    background: #333333;
+    border-radius: 2em;
+    padding-left: 1em;
+}
+
+header > div > form > input:last-of-type {
+    height: 3em;
+    width: 20%;
+    border: none;
+    background: #CCCCCC;
+    border-radius: 2em;
+    padding-left: 1em;
+    cursor: pointer;
+}
+
+#navigation {
+    padding: 2% 10%;
+}
+
+#navigation > nav > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    height: 15vh;
+}
+
+#navigation > nav > ul > li {
+    list-style: none;
+}
+
+#navigation > nav > ul > li > a {
+    text-decoration: none;
+    padding: 0.8em 2em;
+    border: 1px solid #CCCCCC;
+    border-radius: 2em;
+    color: #CCCCCC;
+}
+
+#navigation > nav > ul > li > a:hover {
+    background: #fff;
+}
+
+#content {
+    padding-top: 0;
+}
+
+#content span {
+    color: #fff;
+    margin: 1em 0 0 0;
+}
+
+#content > div {
+    display: grid;
+    grid-template-columns: repeat(5, 18.5%);
+    justify-content: center;
+    grid-gap: 2em;
+}
+
+#content > div > a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+#content img {
+    width: 100%;
+    height: 100%;
+}
+
+#movieID {
+    padding: 5% 5%;
+    color: #CCCCCC;
+}
+
+#movieID > h2 {
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 1%;
+}
+
+#movieID > div:first-of-type {
+    margin-bottom: 3%;
+}
+
+#movieID > div:first-of-type > span {
+    margin-right: 2%;
+}
+
+#movieID > div:last-of-type {
+    margin-bottom: 3%;
+}
+
+#movieID > div:last-of-type > span{
+    padding: 1em;
+    border: 1px solid #CCCCCC;
+    border-radius: 2em;
+    margin-right: 1%;
+}
+
+#movieID > h1 {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 1%;
+}
+
+#movieID > p {
+    width: 50%;
+    line-height: 2em;
+}
+
+#movieBild {
+    padding: 0;
+}
+
+#movieBild > img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.pagination {
+    text-align: center;
+    margin: 5% 0;
+}
+
+.pagination > a > button {
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}

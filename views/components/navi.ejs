@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        <% dataGenres.forEach(elt=> { %>
+            <li><a id="test" href=<%=`/movie/popular/genres/1/${elt.id}`%>>
+                    <%= elt.name %>
+                </a></li>
+            <% }) %>
+    </ul>
+</nav>
