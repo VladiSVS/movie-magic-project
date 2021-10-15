@@ -77,12 +77,18 @@ app.get('/movie/popular/genres/:page/:idGenre', (req, res) => {
 })
 
 app.get('/:id', (req, res) => {
-    axios.get(`https://api.themoviedb.org/3/movie/${req.params.id}?api_key=6d501c3820d27f19b88f8d9aef77c4bc&language=en-US`)
-        .then(function (response) {
+    axios.all([
+        axios.get(`https://api.themoviedb.org/3/movie/${req.params.id}?api_key=${myKEY}&language=en-US`),
+        axios.get(`https://api.themoviedb.org/3/movie/${req.params.id}/videos?api_key=${myKEY}&language=en-US`)
+    ])
+        .then(axios.spread((res1, res2) => {
             // handle success
-            console.log(response.data)
-            res.render('pages/movie.ejs', { dataMovie: response.data })
-        })
+            console.log(res1.data)
+            res.render('pages/movie.ejs', {
+                dataMovie: res1.data,
+                trailerKey: res2.data.results
+            })
+        }))
         .catch(function (error) {
             // handle error
             console.log(error)

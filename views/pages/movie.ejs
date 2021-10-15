@@ -15,32 +15,52 @@
     </header>
     <section id="movieBild">
         <img src="https://image.tmdb.org/t/p/original<%=dataMovie.backdrop_path %>" alt="">
+        <div class="average">
+            <div>
+                <span>&#10029;</span>
+                <h1>
+                    <%= dataMovie.vote_average %> / 10
+                </h1>
+                <p>
+                    <%= dataMovie.vote_count %>
+                </p>
+            </div>
+        </div>
     </section>
     <section id="movieID">
-        <h2>
-            <%=dataMovie.title %>
-        </h2>
         <div>
-            <span>
-                <%=dataMovie.release_date %>
-            </span>
-            <span>
-                <%=dataMovie.status %>
-            </span>
-        </div>
-        <div>
-            <% dataMovie.genres.forEach(elt=> { %>
+            <h2>
+                <%=dataMovie.title %>
+            </h2>
+            <div>
                 <span>
-                    <%= elt.name %>
+                    <%=dataMovie.release_date %>
                 </span>
-                <% }) %>
+                <span>
+                    <%=dataMovie.status %>
+                </span>
+            </div>
+            <div>
+                <% dataMovie.genres.forEach(elt=> { %>
+                    <span>
+                        <%= elt.name %>
+                    </span>
+                    <% }) %>
+            </div>
+            <h1>
+                <%=dataMovie.tagline %>
+            </h1>
+            <p>
+                <%=dataMovie.overview %>
+            </p>
         </div>
-        <h1>
-            <%=dataMovie.tagline %>
-        </h1>
-        <p>
-            <%=dataMovie.overview %>
-        </p>
+        <div>
+            <iframe class="trailer" src="https://www.youtube.com/embed/<%= trailerKey[0].key %>"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
     </section>
 </body>
 

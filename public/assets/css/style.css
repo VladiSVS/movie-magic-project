@@ -109,42 +109,82 @@ header > div > form > input:last-of-type {
 #movieID {
     padding: 5% 5%;
     color: #CCCCCC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#movieID > h2 {
+.average {
+    position: absolute;
+    margin-top: -8vh;
+    right: 0;
+    text-align: center;
+    width: 8em;
+    height: 8em;
+    background: #fff;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.average > div{
+    margin-left: 1em;
+}
+
+.average span {
+    color: gold;
+    font-size: 3em;
+}
+
+.average h1, p {
+    margin: 0;
+}
+
+.average h1 {
+    margin: 0.5em 0;
+}
+
+#movieID > div:first-of-type {
+    width: 50%;
+}
+
+#movieID > div:first-of-type > h2 {
     font-size: 3em;
     margin: 0;
     margin-bottom: 1%;
 }
 
-#movieID > div:first-of-type {
+#movieID > div:first-of-type > div:first-of-type {
     margin-bottom: 3%;
 }
 
-#movieID > div:first-of-type > span {
+#movieID > div:first-of-type > div:first-of-type > span {
     margin-right: 2%;
 }
 
-#movieID > div:last-of-type {
+#movieID > div:first-of-type > div:last-of-type {
     margin-bottom: 3%;
 }
 
-#movieID > div:last-of-type > span{
+#movieID > div:first-of-type > div:last-of-type > span{
     padding: 1em;
     border: 1px solid #CCCCCC;
     border-radius: 2em;
     margin-right: 1%;
 }
 
-#movieID > h1 {
+#movieID > div:first-of-type > h1 {
     font-size: 2em;
     margin: 0;
     margin-bottom: 1%;
 }
 
-#movieID > p {
-    width: 50%;
+#movieID > div:first-of-type > p {
     line-height: 2em;
+}
+
+.trailer {
+    width: 40vw;
+    height: 50vh;
 }
 
 #movieBild {
