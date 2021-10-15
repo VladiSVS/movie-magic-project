@@ -80,6 +80,7 @@ app.get('/:id', (req, res) => {
     axios.get(`https://api.themoviedb.org/3/movie/${req.params.id}?api_key=6d501c3820d27f19b88f8d9aef77c4bc&language=en-US`)
         .then(function (response) {
             // handle success
+            console.log(response.data)
             res.render('pages/movie.ejs', { dataMovie: response.data })
         })
         .catch(function (error) {
